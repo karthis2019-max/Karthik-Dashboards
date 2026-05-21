@@ -312,8 +312,8 @@
 
             transition: 0.35s ease;
 
-            opacity: 0;
-            transform: translateY(40px);
+           opacity:1;
+transform:none;
         }
 
         .dashboard-card:hover {
@@ -369,8 +369,8 @@ gap:32px;
 
             transition: 0.3s ease;
 
-            opacity: 0;
-            transform: translateY(40px);
+           opacity:1;
+transform:none;
         }
 .info-card:hover {
 
@@ -730,3 +730,48 @@ Data Visualization Principles
 </div>
 
 </section>
+
+    <!-- Footer -->
+
+<footer>
+    Created by Karthik Suresh • 2026
+</footer>
+
+
+<!-- Scroll Reveal Animation -->
+
+<script>
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+
+        }
+
+    });
+
+});
+
+
+const hiddenElements =
+document.querySelectorAll(
+'.info-card, .dashboard-card'
+);
+
+
+hiddenElements.forEach(
+
+(el) =>
+observer.observe(el)
+
+);
+
+</script>
+
+
+</body>
+
+</html>
