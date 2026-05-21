@@ -342,12 +342,22 @@
             padding: 0 7% 120px;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
+       .content-grid {
 
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(
+420px,
+1fr
+)
+);
+
+gap:32px;
+
+}
         .info-card {
             padding: 32px;
 
@@ -552,13 +562,11 @@ box-shadow:
 
     </section>
 
-    <!-- Overview -->
+   <!-- PROJECT OVERVIEW + FOCUS -->
 
-    <section class="content" id="overview">
+<section class="content" id="overview">
 
 <div class="content-grid">
-
-<!-- Project Overview -->
 
 <div class="info-card">
 
@@ -567,16 +575,16 @@ Project Overview
 </h3>
 
 <p>
+
 This interactive dashboard was developed using Tableau
 to analyze workplace safety trends, identify injury
 patterns, and present occupational health insights
 through modern analytical visualizations.
+
 </p>
 
 </div>
 
-
-<!-- Key Focus Areas -->
 
 <div class="info-card">
 
@@ -600,9 +608,40 @@ Key Focus Areas
 
 </div>
 
+</div>
+
+</section>
 
 
-<!-- Key Insights -->
+
+<!-- DASHBOARD -->
+
+<section class="dashboard-section" id="dashboard">
+
+<div class="dashboard-card">
+
+<div class="loading-text">
+
+Loading Interactive Dashboard...
+
+</div>
+
+<iframe
+src="https://public.tableau.com/views/OHSAInjury2015-2025/Dashboard12?:showVizHome=no">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+
+<!-- INSIGHTS + RECOMMENDATIONS -->
+
+<section class="content">
+
+<div class="content-grid">
 
 <div class="info-card">
 
@@ -612,25 +651,33 @@ Key Focus Areas
 
 <p>
 
-1. Hand and finger injuries dominate severe incidents: 
-Finger and fingertip injuries account for a significant proportion of severe workplace injuries, making upper extremities the most frequently affected body parts.
-This suggests elevated exposure to machinery, tools, and pinch/crush hazards.<br><br>
+1. Hand and finger injuries dominate severe incidents:
+Finger and fingertip injuries account for a significant
+proportion of severe workplace injuries, indicating
+high exposure to machinery and crush hazards.
+
+
+<br><br>
 
 2. Severe injuries are concentrated in a few states:
-Texas reports the highest number of severe injuries, followed by Florida, Pennsylvania, and Ohio.
-Regional concentration may indicate higher industrial activity, workforce exposure, or reporting volume.<br><br>
+
+Texas reports the highest number of severe injuries,
+followed by Florida, Pennsylvania, and Ohio.
+
+
+<br><br>
 
 3. Hospitalization is the most common severe outcome:
-Over 80% of recorded incidents resulted in hospitalization, while amputations represent a smaller but high-impact subset of cases.
-Although less frequent, amputations carry greater long-term consequences and severity.
+
+Over 80% of incidents resulted in hospitalization,
+while amputations remain lower-frequency but
+high-impact events.
 
 </p>
 
 </div>
 
 
-
-<!-- Recommendations -->
 
 <div class="info-card">
 
@@ -640,22 +687,41 @@ Although less frequent, amputations carry greater long-term consequences and sev
 
 <p>
 
-1. Strengthen machine safety and hand protection programs:
-Prioritize machine guarding, lockout/tagout procedures, and PPE compliance in industries with high rates of hand/finger injuries.<br><br>
+1. Strengthen machine safety and hand protection
+programs through guarding, PPE, and lockout procedures.
 
-2. Target high-risk states and industries for preventive action:
-Allocate additional inspections, training, and safety interventions toward states and sectors with consistently elevated severe injury counts.<br><br>
 
-3. Focus on proactive prevention rather than post-incident response
-Since hospitalization accounts for most severe cases, organizations should emphasize hazard identification, near-miss reporting, and preventive safety training to reduce injury severity before incidents occur.
+<br><br>
+
+2. Target high-risk states and industries with
+additional inspections, interventions, and training.
+
+
+<br><br>
+
+3. Emphasize proactive prevention using hazard
+identification and near-miss reporting before
+serious incidents occur.
 
 </p>
 
 </div>
 
+</div>
+
+</section>
 
 
-<!-- Tools -->
+
+
+<!-- TOOLS -->
+
+<section class="content">
+
+<div style="
+max-width:500px;
+margin:auto;
+">
 
 <div class="info-card">
 
@@ -679,42 +745,6 @@ Data Visualization Principles
 
 </div>
 
-
 </div>
 
 </section>
-       </section>
-
-    <!-- Footer -->
-
-    <footer>
-        Created by Karthik Suresh • 2026
-    </footer>
-
-    <!-- Scroll Reveal Animation -->
-
-    <script>
-
-        const observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-
-            });
-
-        });
-
-        const hiddenElements = document.querySelectorAll(
-            '.info-card, .dashboard-card'
-        );
-
-        hiddenElements.forEach((el) => observer.observe(el));
-
-    </script>
-
-</body>
-
-</html>
